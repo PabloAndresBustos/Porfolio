@@ -1,0 +1,16 @@
+<app-header />
+<ion-content class="ion-text-center ion-margin cards">
+  @for (study of getStudies(); track study.id) {
+      <app-cards 
+      [logo]="study.logo"
+      [startDate]="study.ingreso"
+      [endDate]="study.estado"
+      [task]="getTaskTitle()"
+      [taskText]="study.tareasRealizadas"
+      [achivements]="getAchievementsTitle()"
+      [achivementsText]="study.logros"
+      [buttonName]="getButtonName()"
+      [certificate]="study.certificado"
+      />
+  }
+</ion-content>

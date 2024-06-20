@@ -1,0 +1,14 @@
+<app-header />
+<ion-content class="ion-text-center ion-margin cards">
+    @for (work of getExperinces(); track work.id) {
+        <app-cards 
+        [logo]="work.logo"
+        [startDate]="work.ingreso"
+        [endDate]="work.egreso"
+        [task]="getTaskTitle()"
+        [taskText]="work.tareasRealizadas"
+        [achivements]="getAchievementsTitle()"
+        [achivementsText]="work.logros"
+        />
+    }
+</ion-content>

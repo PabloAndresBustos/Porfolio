@@ -1,0 +1,19 @@
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img{
+            width: 25px;
+            height: 20px;
+        }
+    }
+}

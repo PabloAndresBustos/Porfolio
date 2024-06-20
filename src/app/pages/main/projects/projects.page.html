@@ -1,0 +1,19 @@
+<app-header />
+<ion-content class="ion-text-center ion-margin cards">
+  @for (project of getProjects(); track project.id) {
+      <app-cards 
+      [dates]="false"
+      [logo]="project.logo"
+      [pictures]="project.pictures"
+      [task]="project.name"
+      [taskText]="project.tareasRealizadas"
+      [achivements]="getAchievements()"
+      [achivementsText]="project.logros"
+      [certificate]="project.repository"
+      [downloadLabel]="getDownloadLabel()"
+      [buttonNameDownload]="getButtonNameDowload()"
+      [download]="project.download"
+      [buttonName]="getButtonName()"
+      />
+  }
+</ion-content>

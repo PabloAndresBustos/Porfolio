@@ -1,0 +1,54 @@
+@if (isMobile()) {
+
+  <ion-menu contentId="menu-content" menuId="menu-content" side="start" class="ion-no-border">
+
+    <app-header /> 
+      
+    <ion-content class="ion-text-center">
+      <div class="toggle ion-margin-top">
+        <div 
+        (click)="changeLanguaje()" 
+        >
+          <img src="assets/icon/argentina.png">        
+          <ion-toggle node="md"
+          [checked]="isCheked()"
+          >
+          </ion-toggle>
+          <img src="assets/icon/estados-unidos.png">  
+        </div>
+        <div>
+          <ion-icon name="sunny-outline"></ion-icon>
+          <ion-toggle node="md" [(ngModel)]="displaySrv.selectedTheme"
+          (ionChange)="displaySrv.toggleChange($event)"></ion-toggle>
+          <ion-icon name="moon"></ion-icon> 
+        </div>
+      </div>
+
+      <app-foto-name [radius]="80"/>
+
+      @for (page of pageList(); track page.id) {
+        <ion-menu-toggle auto-hide="false" class="ion-margin-top">
+          <ion-item [routerLink]="page.url" routerDirection="root" detail (click)="changeTitle(page.titulo)">
+            <ion-icon slot="start" [name]="page.icon"></ion-icon>
+            <ion-label> {{page.titulo}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      }
+    </ion-content>
+
+    <ion-footer class="ion-no-border safe-p-bottom ion-text-center">
+      <ion-menu-toggle auto-hide="false" class="ion-justify-content-center">
+        @for (contact of getContacts(); track contact) {
+          <ion-item lines="none" detail (click)="goContact(contact.url)">
+            <ion-icon slot="start" [name]="contact.icon"></ion-icon>
+            <ion-label> {{contact.title}} </ion-label>
+          </ion-item>
+        }
+      </ion-menu-toggle>
+    </ion-footer>
+    
+  </ion-menu>
+
+}
+
+<ion-router-outlet id="menu-content" main></ion-router-outlet>

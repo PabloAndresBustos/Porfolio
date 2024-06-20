@@ -1,0 +1,48 @@
+<ion-header class="ion-text-center">
+    <ion-toolbar color="dark">
+
+      @if (isMobile()) {
+        <ion-menu-button menu="menu-content" slot="start"></ion-menu-button>
+        <ion-title class="ion-text-center"> {{headerTitle()}} </ion-title>
+      }@else {
+        <ion-buttons slot="start">
+          @for (page of pageList(); track page.id) {
+            <ion-button [routerLink]="page.url" (click)="changeTitle(page.titulo)">
+              <ion-icon slot="start" [name]="page.icon"></ion-icon>
+              {{page.titulo}}
+            </ion-button>
+          }
+        </ion-buttons>
+
+        @for (contact of getContacts(); track contact) {
+          <ion-button node="md" color="dark" detail (click)="goContact(contact.url)">
+            <ion-icon slot="start" [name]="contact.icon"></ion-icon>
+            <ion-label> {{contact.title}} </ion-label>
+          </ion-button>
+        }
+
+        <div slot="end" class="toggle">
+
+          <div (click)="changeLanguaje()">
+              <img src="assets/icon/argentina.png">
+              <ion-toggle 
+                slot="end" 
+                node="md"
+                [checked]="isCheked()"
+                >
+              </ion-toggle>
+              <img src="assets/icon/estados-unidos.png">  
+          </div>
+  
+          <div>
+              <ion-icon name="sunny-outline"></ion-icon>
+              <ion-toggle slot="end" node="md" [(ngModel)]="displaySrv.selectedTheme"
+              (ionChange)="displaySrv.toggleChange($event)"></ion-toggle>
+              <ion-icon name="moon"></ion-icon>   
+          </div>
+  
+        </div>
+      }
+    
+  </ion-toolbar>
+</ion-header>

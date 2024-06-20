@@ -1,0 +1,46 @@
+<ion-card>
+  <ion-card-header>
+    <ion-img src={{logo}} class="logo"></ion-img>
+
+    @if (pictures) {
+      <ion-img src={{pictures}} class="ion-margin pictures"></ion-img>
+    }
+    
+
+    @if (dates) {
+      <div class="dates">
+        <p> ● {{displaySrv.interface.tarjetas.inicio}}: {{startDate}} ● {{displaySrv.interface.tarjetas.final}}: {{endDate}}</p>
+      </div>
+    }
+    
+  </ion-card-header>
+
+  <ion-card-content style="margin-bottom: 20px;">
+    <ion-title class="ion-margin"> {{task}} </ion-title>
+    <ion-text>
+      <p> {{taskText}} </p>
+    </ion-text>
+    <ion-title class="ion-margin"> {{achivements}} </ion-title>
+    <ion-text>
+      <p> {{achivementsText}} </p>
+    </ion-text>
+  </ion-card-content>
+
+  <div class="buttons">
+
+    @if (download) {
+    <ion-label class="downloadLabel"> <strong>{{downloadLabel}}</strong>
+      <ion-button style="width: 100%;" color="dark" node="md" (click)="toDownload()">
+        {{ buttonNameDownload }}
+      </ion-button>
+    </ion-label>
+    }
+  
+    @if (certificate && certificate !== "") {
+      <ion-button color="dark" node="md" (click)="toCerticate()">
+        {{ buttonName }}
+      </ion-button>
+    }
+  
+  </div>
+</ion-card>

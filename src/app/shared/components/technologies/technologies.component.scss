@@ -1,0 +1,17 @@
+.icons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        ion-icon{
+            font-size: 24px;
+        }
+    }
+}

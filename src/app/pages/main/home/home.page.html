@@ -1,0 +1,89 @@
+<app-header />
+<ion-content class="ion-text-center">
+  @if (!displaySrv.headerMobile()) {
+    <app-foto-name [radius]="150"/>
+  }
+    <div class="ion-margin-top" [ngClass]="this.displaySrv.headerMobile() ? '' : 'content'">
+      @if (this.displaySrv.headerMobile()) {
+        <app-technologies />
+      }  
+      <div class="title">
+        <ion-icon name="arrow-redo"></ion-icon>
+        <h1> {{displaySrv.interface.sobreMi.titulo}} </h1>
+        <ion-icon name="arrow-undo"></ion-icon>
+      </div>
+      <div class="ion-text-start ion-margin">
+        <p>
+          {{displaySrv.interface.sobreMi.parrafoUno}}
+          <!-- Me distingo por mi amabilidad y habilidades para el trabajo en equipo, siempre priorizando el bienestar del grupo. Mi trayectoria de 17 años en el soporte técnico a usuarios de aplicaciones, junto con mis 2 años de experiencia en el desarrollo de aplicaciones web, me han convertido en un profesional versátil y autodidacta. No temo enfrentarme a situaciones de alta presión, pues confío en mi capacidad para resolver problemas de manera eficiente. -->
+        </p>
+        <br>
+        <p>
+          {{displaySrv.interface.sobreMi.parrafoDos}}
+          <!-- Mi enfoque analítico me permite abordar nuevos desafíos con determinación, disfrutando del proceso de análisis que precede a la toma de decisiones fundamentales. Soy conocido por mi cordialidad y respeto hacia mis compañeros y clientes, lo que fomenta un ambiente de colaboración y confianza en cualquier entorno de trabajo. Estoy siempre listo para superar obstáculos y alcanzar metas, aportando mi inteligencia y experiencia para el beneficio del equipo y la organización en su conjunto -->
+        </p>
+      </div>
+        <ion-button id="open-skills" slot="center" mode="md" class="button" color="dark">
+          {{displaySrv.interface.contenido.boton}}
+        </ion-button>
+      @if (!this.displaySrv.headerMobile()) {
+        <app-technologies />
+      }  
+    </div>
+    <ion-modal trigger="open-skills">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="dark" class="ion-text-center">
+            <ion-title> {{displaySrv.interface.contenido.boton}} </ion-title>
+            <ion-buttons slot="end">
+              <ion-button class="close" (click)="close()">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-text class="ion-margin">
+            <div class="ion-text-center">
+              <p> 
+                {{displaySrv.interface.popUp.habilidadesUno}}
+                <!-- - ● Analitico ● Capacidad resolutiva ● -  -->
+              </p>
+              <p>
+                {{displaySrv.interface.popUp.habilidadesDos}} 
+                <!-- - ● Proactivo ● Trabajo en equipo ● Autodidacta ● -  -->
+              </p>
+            </div>
+            <br>
+            <p class="ion-text-start ion-margin">
+              {{displaySrv.interface.popUp.parrafoUno}}
+              <!-- Si estás buscando a alguien con un enfoque analítico, una gran capacidad resolutiva y una actitud proactiva, ¡has llegado al lugar correcto! Estoy aquí para ofrecerte estas habilidades y más. -->
+              <br>
+              {{displaySrv.interface.popUp.parrafoDos}}
+              <!-- Soy un individuo altamente analítico, capaz de descomponer problemas complejos en partes manejables y encontrar soluciones efectivas. Mi enfoque meticuloso y mi habilidad para analizar datos me permiten identificar patrones y tendencias que pueden ayudar a informar decisiones importantes. -->
+              <br>
+              <br>
+              {{displaySrv.interface.popUp.parrafoTres}}
+              <!-- Además, mi capacidad resolutiva es una de mis mayores fortalezas. -->
+              <br>
+              {{displaySrv.interface.popUp.parrafoCuatro}}
+              <!-- No me asusto ante los desafíos; de hecho, los veo como oportunidades para crecer y aprender. Soy persistente en la búsqueda de soluciones y estoy comprometido a encontrar la mejor manera de abordar cualquier obstáculo que se presente en mi camino. -->
+              <br>
+              {{displaySrv.interface.popUp.parrafoCinco}}
+              <!-- Mi naturaleza proactiva significa que no espero a que las cosas sucedan, ¡las hago suceder! Siempre estoy buscando formas de mejorar los procesos y resultados, y estoy dispuesto a asumir la responsabilidad y liderar iniciativas que impulsen el éxito. -->
+              <br>
+              <br>
+              {{displaySrv.interface.popUp.parrafoSeis}}
+              <!-- Además, soy un gran jugador de equipo. Disfruto colaborando con colegas y valoro la diversidad de ideas y perspectivas que cada miembro del equipo aporta. Creo en el poder del trabajo en equipo y estoy comprometido a contribuir al éxito colectivo. -->
+              <br>
+              {{displaySrv.interface.popUp.parrafoSiete}}
+              <!-- Por último, pero no menos importante, soy autodidacta. Siempre estoy buscando oportunidades para aprender y crecer, ya sea a través de la formación formal o la exploración independiente. Creo en la importancia de mantenerme al día con las últimas tendencias y avances en mi campo para seguir siendo relevante y efectivo en mi trabajo. -->
+              <br>
+              {{displaySrv.interface.popUp.parrafoOcho}}
+              <!-- En resumen, si estás buscando a alguien que sea analítico, resolutivo, proactivo, trabajador en equipo y autodidacta, ¡no busques más! Estoy listo para asumir nuevos desafíos y llevar tus proyectos al siguiente nivel. -->
+            </p>
+          </ion-text>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+</ion-content>
