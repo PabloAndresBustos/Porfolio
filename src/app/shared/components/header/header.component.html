@@ -3,7 +3,7 @@
 
       @if (isMobile()) {
         <ion-menu-button menu="menu-content" slot="start"></ion-menu-button>
-        <ion-title class="ion-text-center"> {{headerTitle()}} </ion-title>
+        <ion-title class="ion-text-center title"> {{headerTitle()}} </ion-title>
       }@else {
         <ion-buttons slot="start">
           @for (page of pageList(); track page.id) {
