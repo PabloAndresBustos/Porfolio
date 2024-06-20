@@ -21,16 +21,22 @@
     .icons{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        width: 70%;
         gap: 20px;
-        margin-bottom: 20px;
-    }
+        margin: 0 auto;
 
-    div {
-        ion-icon{
-            font-size: 48px;
+        div{            
+            
+            ion-label{
+                text-align: start;
+            }
+
+            ion-icon{
+                font-size: 40px;
+                width: 100%;
+            }
         }
     }
-
-
+        
     
 }
