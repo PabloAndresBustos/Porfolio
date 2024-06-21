@@ -7,7 +7,7 @@
       }@else {
         <ion-buttons slot="start">
           @for (page of pageList(); track page.id) {
-            <ion-button [routerLink]="page.url" (click)="changeTitle(page.titulo)">
+            <ion-button [routerLink]="page.url" (click)="changeTitle(page.titulo)" (click)="titles()" >
               <ion-icon slot="start" [name]="page.icon"></ion-icon>
               {{page.titulo}}
             </ion-button>

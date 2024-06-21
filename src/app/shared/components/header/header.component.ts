@@ -68,6 +68,10 @@ export class HeaderComponent implements OnInit {
     return this.displaySrv.languajeTitle();
   }
 
+  titles(){
+    return this.displaySrv.titlesStart()
+  }
+
   ngOnInit() {
 
  }

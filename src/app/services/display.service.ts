@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ElementRef, HostListener, Injectable, inject, signal } from '@angular/core';
+import { ElementRef, Injectable, inject, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -26,13 +26,7 @@ export class DisplayService {
     this.http.get<any>('assets/interface/interface.JSON')
     .subscribe(data => {
 
-      if(this.toggleChecked()){
-        this.interface = data.idiomas.ingles;
-        this.toggleChecked.set(true);
-      }else{
-        this.interface = data.idiomas.espaniol;
-        this.toggleChecked.set(false);
-      }
+      this.languajeStart(data);
 
       this.languajeTitle.update(
         value => value = [ 
@@ -43,14 +37,32 @@ export class DisplayService {
         ]
       );
 
-/*       for (let i = 0; i < this.languajeTitle().length; i++) {
-        const currentTitle = this.languajeTitle()[i].titulo;
-        this.changeTitle(currentTitle);
-      } */
+      this.titlesStart();
 
     })
   }
+
+  languajeStart(data:any){
+    if(this.toggleChecked()){
+      this.interface = data.idiomas.ingles;
+      this.toggleChecked.set(true);
+    }else{
+      this.interface = data.idiomas.espaniol;
+      this.toggleChecked.set(false);
+    }
+  }
+
+  titlesStart(){
+    const currentPath = this.location.path();
+    for (let i = 0; i < this.languajeTitle().length; i++) {
+      if(currentPath === this.languajeTitle()[i].url){
+        const currentTitle = this.languajeTitle()[i].titulo;
+        this.changeTitle(currentTitle);
+      }
+    }
+  }
   /* Fin seleccion de idioma */
+
 
   /* Cambio de idioma de los titulos */
   changeTitle(title:string){
@@ -132,4 +144,5 @@ export class DisplayService {
     this.languaje();
   }
   /* Fin cambio de textos segun idioma */
+
 }

@@ -58,7 +58,7 @@ export class MainPage implements OnInit, AfterViewInit {
   }
   
   ngOnInit() { 
-
+    this.displaySrv.titlesStart();
   }
 
   ngAfterViewInit(){
