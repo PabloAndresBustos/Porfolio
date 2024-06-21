@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ElementRef, Injectable, inject, signal } from '@angular/core';
+import { ElementRef, HostListener, Injectable, inject, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -27,15 +27,15 @@ export class DisplayService {
     .subscribe(data => {
 
       if(this.toggleChecked()){
-        this.interface = data.idiomas.ingles
+        this.interface = data.idiomas.ingles;
         this.toggleChecked.set(true);
       }else{
-        this.interface = data.idiomas.espaniol
+        this.interface = data.idiomas.espaniol;
         this.toggleChecked.set(false);
       }
 
       this.languajeTitle.update(
-        value => value = [
+        value => value = [ 
           this.interface.sideBar.inicio,
           this.interface.sideBar.experiencia,
           this.interface.sideBar.estudios,
@@ -43,10 +43,10 @@ export class DisplayService {
         ]
       );
 
-      for (let i = 0; i < this.languajeTitle().length; i++) {
+/*       for (let i = 0; i < this.languajeTitle().length; i++) {
         const currentTitle = this.languajeTitle()[i].titulo;
         this.changeTitle(currentTitle);
-      }
+      } */
 
     })
   }

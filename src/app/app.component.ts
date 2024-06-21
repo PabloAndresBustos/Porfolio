@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     this.displaySrv.languaje();
     /* Cambio de theme */ 
-    this.displaySrv.chageTheme();    
+    this.displaySrv.chageTheme();
   }
 
 }
