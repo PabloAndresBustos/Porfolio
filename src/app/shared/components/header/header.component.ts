@@ -68,14 +68,6 @@ export class HeaderComponent implements OnInit {
     return this.displaySrv.languajeTitle();
   }
 
-  getContacts(){
-    return this.displaySrv.contacts;
-  }
-
-  goContact(url:string){
-    window.open(url, '_blank');
-  }
-
   ngOnInit() {
 
  }

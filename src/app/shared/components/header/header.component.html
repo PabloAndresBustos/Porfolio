@@ -14,13 +14,6 @@
           }
         </ion-buttons>
 
-        @for (contact of getContacts(); track contact) {
-          <ion-button node="md" color="dark" detail (click)="goContact(contact.url)">
-            <ion-icon slot="start" [name]="contact.icon"></ion-icon>
-            <ion-label> {{contact.title}} </ion-label>
-          </ion-button>
-        }
-
         <div slot="end" class="toggle">
 
           <div (click)="changeLanguaje()">

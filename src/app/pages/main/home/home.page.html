@@ -2,6 +2,12 @@
 <ion-content class="ion-text-center">
   @if (!displaySrv.headerMobile()) {
     <app-foto-name [radius]="150"/>
+    @for (contact of getContacts(); track contact) {
+      <ion-button node="md" color="dark" (click)="goContact(contact.url)">
+        <ion-icon slot="start" [name]="contact.icon"></ion-icon>
+        <ion-label> {{contact.title}} </ion-label>
+      </ion-button>
+    }
   }
     <div class="ion-margin-top" [ngClass]="this.displaySrv.headerMobile() ? '' : 'content'">
       @if (this.displaySrv.headerMobile()) {

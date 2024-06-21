@@ -20,6 +20,14 @@ export class HomePage implements OnInit{
   close(){
     this.modal.dismiss();
   }
+
+  getContacts(){
+    return this.displaySrv.contacts;
+  }
+
+  goContact(url:string){
+    window.open(url, '_blank');
+  }
   
   ngOnInit() {
 
