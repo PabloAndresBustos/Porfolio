@@ -80,6 +80,7 @@ export class DisplayService {
       this.initialTheme(mediaQuery.matches);
     })
   }
+  /* fin de seleccion de Theme */
 
 
   /* Animacion del texto en la foto */
