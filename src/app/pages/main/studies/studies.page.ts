@@ -17,12 +17,16 @@ export class StudiesPage implements OnInit {
 
   getStudies(){
     if(this.displaySrv.selectedTheme){
-      this.displaySrv.interface.estudios[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
-      this.displaySrv.interface.estudios[2].logo = "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg"
+      const whiteLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg";
+      const whiteAlura = "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg";
+      this.displaySrv.interface.estudios[1].logo = whiteLogo;
+      this.displaySrv.interface.estudios[2].logo = whiteAlura;
       return this.displaySrv.interface.estudios;  
     }else{
-      this.displaySrv.interface.estudios[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
-      this.displaySrv.interface.estudios[2].logo = "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg"
+      const darkLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg";
+      const darkAlura = "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg";
+      this.displaySrv.interface.estudios[1].logo = darkLogo;
+      this.displaySrv.interface.estudios[2].logo = darkAlura;
       return this.displaySrv.interface.estudios
     }
   }

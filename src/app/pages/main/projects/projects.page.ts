@@ -1,4 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { TitleStrategy } from '@angular/router';
 import { DisplayService } from 'src/app/services/display.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -15,16 +16,16 @@ export class ProjectsPage implements OnInit {
 
   getProjects(){
     if(this.displaySrv.selectedTheme){
-      this.displaySrv.interface.proyectos[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
-      this.displaySrv.interface.proyectos[2].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
-      this.displaySrv.interface.proyectos[3].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
-      this.displaySrv.interface.proyectos[4].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      const whiteLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg";
+      for (let i = 1; i < (this.displaySrv.interface.proyectos).length; i++) {
+        this.displaySrv.interface.proyectos[i].logo = whiteLogo;
+      }
       return this.displaySrv.interface.proyectos;
     }else{
-      this.displaySrv.interface.proyectos[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
-      this.displaySrv.interface.proyectos[2].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
-      this.displaySrv.interface.proyectos[3].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
-      this.displaySrv.interface.proyectos[4].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      const darkLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg";
+      for (let i = 1; i < (this.displaySrv.interface.proyectos).length; i++) {
+        this.displaySrv.interface.proyectos[i].logo = darkLogo;
+      }
       return this.displaySrv.interface.proyectos;
     }
   }
