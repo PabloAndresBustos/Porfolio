@@ -135,7 +135,6 @@ export class DisplayService {
     }
 
   }
-
   /* Fin animacion de texto en la foto */
 
   /* Cambio de los textos segun idioma */
