@@ -14,7 +14,19 @@ export class ProjectsPage implements OnInit {
   displaySrv = inject(DisplayService)
 
   getProjects(){
-    return this.displaySrv.interface.proyectos;
+    if(this.displaySrv.selectedTheme){
+      this.displaySrv.interface.proyectos[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      this.displaySrv.interface.proyectos[2].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      this.displaySrv.interface.proyectos[3].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      this.displaySrv.interface.proyectos[4].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      return this.displaySrv.interface.proyectos;
+    }else{
+      this.displaySrv.interface.proyectos[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      this.displaySrv.interface.proyectos[2].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      this.displaySrv.interface.proyectos[3].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      this.displaySrv.interface.proyectos[4].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      return this.displaySrv.interface.proyectos;
+    }
   }
 
   getButtonName(){

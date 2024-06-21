@@ -16,7 +16,16 @@ export class StudiesPage implements OnInit {
   constructor() { }
 
   getStudies(){
-    return this.displaySrv.interface.estudios;
+    if(this.displaySrv.selectedTheme){
+      this.displaySrv.interface.estudios[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg"
+      this.displaySrv.interface.estudios[2].logo = "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg"
+      return this.displaySrv.interface.estudios;  
+    }else{
+      this.displaySrv.interface.estudios[1].logo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg"
+      this.displaySrv.interface.estudios[2].logo = "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg"
+      console.log(this.displaySrv.interface.estudios)
+      return this.displaySrv.interface.estudios
+    }
   }
 
   getButtonName(){
@@ -32,7 +41,7 @@ export class StudiesPage implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log(this.getStudies())
   }
 
 }
