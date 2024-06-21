@@ -49,8 +49,8 @@
                 }
             },
             "tarjetas": {
-                "inicio": "Fecha de inicio",
-                "final": "Fecha de egreso",
+                "inicio": "Inicio",
+                "final": "Egreso",
                 "tareas": "Tareas",
                 "logros": "Logros",
                 "descargaTitulo": "Descarga archivos para probar la APP",
