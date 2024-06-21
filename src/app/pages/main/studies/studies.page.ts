@@ -44,7 +44,6 @@ export class StudiesPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.getStudies())
   }
 
 }
