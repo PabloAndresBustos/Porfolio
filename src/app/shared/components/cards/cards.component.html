@@ -5,6 +5,10 @@
     @if (pictures) {
       <ion-img src={{pictures}} class="ion-margin pictures"></ion-img>
     }
+
+    @if (video) {
+      <video src={{video}} class="project-video" controls></video>
+    }
     
 
     @if (dates) {

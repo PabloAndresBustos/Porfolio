@@ -17,6 +17,7 @@ export class CardsComponent  implements OnInit {
 
   @Input() logo!:string;
   @Input() pictures!:string;
+  @Input() video!:string;
   @Input() startDate!:string;
   @Input() endDate!:string;
   @Input() task!:string;
