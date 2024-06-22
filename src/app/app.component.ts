@@ -20,6 +20,7 @@ export class AppComponent implements OnInit{
     this.displaySrv.languaje();
     /* Cambio de theme */ 
     this.displaySrv.chageTheme();
+  
   }
 
 }

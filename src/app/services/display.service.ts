@@ -20,14 +20,14 @@ export class DisplayService {
     {title: 'LinkedIn', url: 'https://www.linkedin.com/in/pipablo/', icon: 'logo-github'},
     {title: 'GitHub', url: 'https://github.com/PabloAndresBustos', icon: 'logo-linkedin'}
   ]
-
+  
   /* Seleccion de idioma */
   languaje(){
     this.http.get<any>('assets/interface/interface.JSON')
     .subscribe(data => {
 
       this.languajeStart(data);
-
+       
       this.languajeTitle.update(
         value => value = [ 
           this.interface.sideBar.inicio,
@@ -62,7 +62,6 @@ export class DisplayService {
     }
   }
   /* Fin seleccion de idioma */
-
 
   /* Cambio de idioma de los titulos */
   changeTitle(title:string){

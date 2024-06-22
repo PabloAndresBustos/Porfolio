@@ -1,5 +1,4 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { TitleStrategy } from '@angular/router';
 import { DisplayService } from 'src/app/services/display.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -15,23 +14,7 @@ export class ProjectsPage implements OnInit {
   displaySrv = inject(DisplayService)
 
   getProjects(){
-    if(this.displaySrv.selectedTheme){
-      const whiteLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg";
-      for (let i = 0; i < (this.displaySrv.interface.proyectos).length; i++) {
-        if(this.displaySrv.interface.proyectos[i].lugar === "Technology with porpuse"){
-          this.displaySrv.interface.proyectos[i].logo = whiteLogo;   
-        }
-      }
-      return this.displaySrv.interface.proyectos;
-    }else{
-      const darkLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg";
-      for (let i = 0; i < (this.displaySrv.interface.proyectos).length; i++) {
-        if(this.displaySrv.interface.proyectos[i].lugar === "Technology with porpuse"){
-          this.displaySrv.interface.proyectos[i].logo = darkLogo;   
-        }
-      }
-      return this.displaySrv.interface.proyectos;
-    }
+    return this.displaySrv.interface.proyectos;
   }
 
   getButtonName(){

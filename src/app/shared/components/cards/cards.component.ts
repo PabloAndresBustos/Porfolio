@@ -16,6 +16,7 @@ export class CardsComponent  implements OnInit {
   displaySrv = inject(DisplayService);
 
   @Input() logo!:string;
+  @Input() logoWhite!: string;
   @Input() pictures!:string;
   @Input() video!:string;
   @Input() startDate!:string;
@@ -37,6 +38,10 @@ export class CardsComponent  implements OnInit {
 
   toDownload(){
     window.open(this.download, '_blank');
+  }
+
+  themeSelected(){
+    return this.displaySrv.selectedTheme;
   }
 
 
