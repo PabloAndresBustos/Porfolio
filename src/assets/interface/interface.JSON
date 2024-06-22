@@ -130,7 +130,7 @@
                     "name": "Administrador de productos",
                     "tareasRealizadas": "Proyecto que permite administrar la publicación de productos para una tienda virtual, la APP esta realizada con IONIC+Angular 18, utiliza FireBase de Google para almacenar la información y el build se realizo en Android Studio para obtener el APK instalable",
                     "logros": "Aprendimos la utilización de IONIC Framework, FireBase, Android Studio para el build en APK",
-                    "repository": "",
+                    "repository": "https://github.com/PabloAndresBustos/product-admin",
                     "pictures": "",
                     "video": "/assets/video/productAdmin.mp4",
                     "download": ""
@@ -327,7 +327,7 @@
                     "name": "Administrador de productos",
                     "tareasRealizadas": "This project allows managing the publication of products for a virtual store. The app is developed using IONIC + Angular 18, uses Google FireBase to store information, and the build was done in Android Studio to obtain the installable APK",
                     "logros": "We learned to use the IONIC Framework, FireBase, and Android Studio for building APKs.",
-                    "repository": "",
+                    "repository": "https://github.com/PabloAndresBustos/product-admin",
                     "pictures": "",
                     "video": "/assets/video/productAdmin.mp4",
                     "download": ""
