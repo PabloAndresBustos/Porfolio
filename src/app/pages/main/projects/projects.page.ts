@@ -17,14 +17,18 @@ export class ProjectsPage implements OnInit {
   getProjects(){
     if(this.displaySrv.selectedTheme){
       const whiteLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg";
-      for (let i = 1; i < (this.displaySrv.interface.proyectos).length; i++) {
-        this.displaySrv.interface.proyectos[i].logo = whiteLogo;
+      for (let i = 0; i < (this.displaySrv.interface.proyectos).length; i++) {
+        if(this.displaySrv.interface.proyectos[i].lugar === "Technology with porpuse"){
+          this.displaySrv.interface.proyectos[i].logo = whiteLogo;   
+        }
       }
       return this.displaySrv.interface.proyectos;
     }else{
       const darkLogo = "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg";
-      for (let i = 1; i < (this.displaySrv.interface.proyectos).length; i++) {
-        this.displaySrv.interface.proyectos[i].logo = darkLogo;
+      for (let i = 0; i < (this.displaySrv.interface.proyectos).length; i++) {
+        if(this.displaySrv.interface.proyectos[i].lugar === "Technology with porpuse"){
+          this.displaySrv.interface.proyectos[i].logo = darkLogo;   
+        }
       }
       return this.displaySrv.interface.proyectos;
     }
