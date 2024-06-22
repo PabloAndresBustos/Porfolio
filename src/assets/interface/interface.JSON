@@ -138,7 +138,7 @@
                 {
                     "id": 2,
                     "lugar": "Alura",
-                    "logo": "https://www.emser.net/static/images/emser.jpg",
+                    "logo": "/assets/images/emprendedor.png",
                     "name": "Arcor Sustitutos",
                     "tareasRealizadas": "Este proyecto se llama - Arcor Sustitutos - No era posible realizar la carga de pedidos, por el cambio de ciertos codigos.",
                     "logros": "Esto complicaba el soporte, por lo que diseñe una APP para realizar los cambios de los codigos de manera automatica en los excel, Esta Aplicaion esta realizada con Node.js, XLSX-Populate, EJS, FS y Multer, como principales herramientas.",
@@ -335,7 +335,7 @@
                 {
                     "id": 2,
                     "lugar": "Alura",
-                    "logo": "https://www.emser.net/static/images/emser.jpg",
+                    "logo": "/assets/images/emprendedor.png",
                     "name": "Arcor Sustitutos",
                     "tareasRealizadas": "This project is called - Arcor Substitutes - It was not possible to process orders due to changes in certain codes.",
                     "logros": "This complicated support, so I designed an app to automatically make code changes in the Excel files. This application is built with Node.js, XLSX-Populate, EJS, FS, and Multer as the main tools.",
