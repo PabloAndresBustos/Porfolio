@@ -1,13 +1,13 @@
 <ion-card>
   <ion-card-header>
     @if(themeSelected() && logoWhite){
-      <ion-img src={{logoWhite}} class="logo"></ion-img>  
+      <ion-img src={{logoWhite}} class="logo" alt={{altImage}}></ion-img>  
     }@else {
-      <ion-img src={{logo}} class="logo"></ion-img>
+      <ion-img src={{logo}} class="logo" alt={{altImage}}></ion-img>
     }
         
     @if (pictures) {
-      <ion-img src={{pictures}} class="ion-margin pictures"></ion-img>
+      <ion-img src={{pictures}} class="ion-margin pictures" alt="project-picture"></ion-img>
     }
 
     @if (video) {

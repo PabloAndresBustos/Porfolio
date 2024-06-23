@@ -3,6 +3,7 @@
   @for (study of getStudies(); track study.id) {
       <app-cards 
       [logo]="study.logo"
+      [altImage]="study.lugar"
       [logoWhite]="study.logoWhite"
       [startDate]="study.ingreso"
       [endDate]="study.estado"

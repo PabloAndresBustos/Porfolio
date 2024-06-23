@@ -3,6 +3,7 @@
     @for (work of getExperinces(); track work.id) {
         <app-cards 
         [logo]="work.logo"
+        [altImage]="work.empresa"
         [startDate]="work.ingreso"
         [endDate]="work.egreso"
         [task]="getTaskTitle()"
