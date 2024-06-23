@@ -8,12 +8,14 @@ import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 if (environment.production) {
   enableProdMode();
 }
 
 inject();
+injectSpeedInsights();
 
 bootstrapApplication(AppComponent, {
   providers: [
