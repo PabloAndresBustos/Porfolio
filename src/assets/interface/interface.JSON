@@ -93,16 +93,6 @@
             "estudios": [
                 {
                     "id": 1,
-                    "lugar": "Codo a Codo",
-                    "logo": "assets/images/codoAcodo.png",
-                    "ingreso": "10/03/2024",
-                    "estado": "Actualidad",
-                    "tareasRealizadas": "Desarrollo BackEnd con Python ● Desarrollo FrontEnd con HTML, CSS ● Bootstrap ● JavaScript",
-                    "logros": "- EN DESARROLLO - Actualmente estoy cursando, por lo que aun no contamos con los logros del curso",
-                    "certificado": ""
-                },
-                {
-                    "id": 2,
                     "lugar": "Technology with Propouse",
                     "logo": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg",
                     "logoWhite": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg",
@@ -113,7 +103,7 @@
                     "certificado": "https://drive.google.com/file/d/1ARHYdvL2BOAGxU9yuNU8mUD8Sk7eWW49/view?usp=sharing"
                 },
                 {
-                    "id": 3,
+                    "id": 2,
                     "lugar": "Alura",
                     "logo": "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg",
                     "logoWhite": "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg",
@@ -296,16 +286,6 @@
             "estudios": [
                 {
                     "id": 1,
-                    "lugar": "Codo a Codo",
-                    "logo": "assets/images/codoAcodo.png",
-                    "ingreso": "10/03/2024",
-                    "estado": "Currently",
-                    "tareasRealizadas": "BackEnd Development with Python ● FrontEnd Development with HTML, CSS ● Bootstrap ● JavaScript",
-                    "logros": "- In progress - Currently, I am taking a course, so we do not yet have the course achievements.",
-                    "certificado": ""
-                },
-                {
-                    "id": 2,
                     "lugar": "Technology with Propouse",
                     "logo": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg",
                     "logoWhite": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg",
@@ -316,7 +296,7 @@
                     "certificado": "https://drive.google.com/file/d/1ARHYdvL2BOAGxU9yuNU8mUD8Sk7eWW49/view?usp=sharing"
                 },
                 {
-                    "id": 3,
+                    "id": 2,
                     "lugar": "Alura",
                     "logo": "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg",
                     "logoWhite": "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg",

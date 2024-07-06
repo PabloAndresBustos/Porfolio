@@ -3,3 +3,8 @@ app-cards{
     gap: 10px;
     margin-top: 20px;
 }
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
