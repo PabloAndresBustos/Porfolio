@@ -17,8 +17,8 @@ export class DisplayService {
   public readonly headerTitle = signal<string>('');
   public readonly languajeTitle = signal<any[]>([]); 
   public readonly contacts = [
-    {title: 'LinkedIn', url: 'https://www.linkedin.com/in/pipablo/', icon: 'logo-github'},
-    {title: 'GitHub', url: 'https://github.com/PabloAndresBustos', icon: 'logo-linkedin'}
+    {title: 'LinkedIn', url: 'https://www.linkedin.com/in/pipablo/', icon: 'logo-linkedin'},
+    {title: 'GitHub', url: 'https://github.com/PabloAndresBustos', icon: 'logo-github'}
   ]
   
   /* Seleccion de idioma */
