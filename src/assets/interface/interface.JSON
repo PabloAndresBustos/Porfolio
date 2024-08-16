@@ -93,6 +93,17 @@
             "estudios": [
                 {
                     "id": 1,
+                    "lugar": "Mercado Pago",
+                    "logo": "https://http2.mlstatic.com/frontend-assets/mp-web-navigation/ui-navigation/6.7.24/mercadopago/logo__large.png",
+                    "logoWhite": "https://http2.mlstatic.com/frontend-assets/mp-web-navigation/ui-navigation/6.7.24/mercadopago/logo__large.png",
+                    "ingreso": "14/08/2024",
+                    "estado": "16/08/2024",
+                    "tareasRealizadas": "Desarrollo FrontEnd con JavaScript, HTML, CSS ● Desarrollo BackEnd con Node.js ● Formacion con la API de Mercado Pago",
+                    "logros": "Correcta comunicacion entre el FrontEnd y el BackEnd para la confirmacion de pagos con tarjeta de crèdito y cuentas de Mercado Pago",
+                    "certificado": "https://drive.google.com/file/d/17sSolKuFJAV_mAigIEp75ZhXmqTHhsBk/view?usp=sharing"
+                },
+                {
+                    "id": 2,
                     "lugar": "Technology with Propouse",
                     "logo": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose.svg",
                     "logoWhite": "https://technologywithpurpose.org/wp-content/uploads/2022/10/technology-with-purpose-white.svg",
@@ -103,7 +114,7 @@
                     "certificado": "https://drive.google.com/file/d/1ARHYdvL2BOAGxU9yuNU8mUD8Sk7eWW49/view?usp=sharing"
                 },
                 {
-                    "id": 2,
+                    "id": 3,
                     "lugar": "Alura",
                     "logo": "https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg",
                     "logoWhite": "https://www.aluracursos.com/assets/img/home/alura-logo.1712144089.svg",
